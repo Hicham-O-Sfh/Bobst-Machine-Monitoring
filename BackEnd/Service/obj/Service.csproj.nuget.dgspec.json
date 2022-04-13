@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\BackEnd.csproj": {}
+    "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Service\\Service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\BackEnd.csproj": {
+    "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\BackEnd.csproj",
-        "projectName": "BackEnd",
-        "projectPath": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\BackEnd.csproj",
+        "projectUniqueName": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Service\\Service.csproj",
+        "projectName": "Service",
+        "projectPath": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Service\\Service.csproj",
         "packagesPath": "C:\\Users\\hosaffih\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\obj\\",
+        "outputPath": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hosaffih\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,12 +39,6 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "dependencies": {
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[6.2.3, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
