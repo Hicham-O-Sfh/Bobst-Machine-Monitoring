@@ -1,4 +1,4 @@
-﻿namespace WebAPI.DTOs
+﻿namespace Repository.Data.DTOs
 {
     public class DtoBase
     {

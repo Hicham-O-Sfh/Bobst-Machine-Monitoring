@@ -1,12 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Repository.Data.Models;
 using Repository.Interfaces;
 
-namespace Repository
+namespace Repository.Repositories
 {
     public class MachineRepository : IMachineRepository
     {

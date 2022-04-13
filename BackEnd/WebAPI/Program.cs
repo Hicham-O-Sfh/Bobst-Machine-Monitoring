@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using Repository;
 using Repository.Data.Models;
+using Repository.Interfaces;
 using WebAPI.Helpers;
 
 var myAllowSpecificOrigins = "_myAllowSpecificOrigins";
@@ -10,20 +12,15 @@ builder.Logging.ClearProviders();
 builder.Logging.AddConsole();
 
 // Add services to the container.
-builder.Services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
 builder.Services.AddControllers();
 // builder.Services.AddControllers().AddNewtonsoftJson(options =>
 //     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
 // );
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//Caching
-builder.Services.AddMemoryCache();
-
 //Add IoC Mapping 
-// builder.Services.AddScoped<ICollaborateurRepository, CollaborateurRepository>();
+// builder.Services.AddScoped<IMachineRepository, MachineRepository>();
 
 //DBContext Config 
 builder.Services.AddDbContext<MachineMonitoringContext>(options =>

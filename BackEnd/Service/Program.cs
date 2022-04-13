@@ -1,6 +1,10 @@
+using Repository.Interfaces;
+using Repository.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
+// builder.Services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
+builder.Services.AddScoped<IMachineRepository, MachineRepository>();
 
 app.Run();
