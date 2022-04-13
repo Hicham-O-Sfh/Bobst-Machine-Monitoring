@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9EnOKcTC19CTlFWqme8xk7+MDoBdrJkLEV3vl7ySKK9ElLvGPF09sB7rgoxY9+za459MSM6YRgkSQYGwiKZkpA==",
+  "dgSpecHash": "JWxVVSYQ1hHyUBtJJIUN7cQztVbz1CsqODVEQVDXKmx/b7hY5IXd4n9sBGEZSjyZF2QWprN8n0Y2pGGAYuWqFw==",
   "success": true,
-  "projectFilePath": "c:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Service\\Service.csproj",
+  "projectFilePath": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Service\\Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hosaffih\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\hosaffih\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

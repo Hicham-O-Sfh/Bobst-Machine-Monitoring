@@ -1,6 +1,7 @@
-using Repository.Data.DTOs;
+using AutoMapper;
 using Repository.Data.Models;
 using Repository.Interfaces;
+using Service.DTOs;
 using Service.Interfaces;
 
 namespace Service.Services
@@ -10,35 +11,41 @@ namespace Service.Services
         private readonly IMachineRepository _machineRepository;
         private readonly IMapper _mapper;
 
-
-        public Task<MachineDTO> AddMachine(MachineDTO machine)
+        public MachineService(IMachineRepository machineRepository, IMapper mapper)
         {
-            throw new NotImplementedException();
+            this._machineRepository = machineRepository;
+            this._mapper = mapper;
         }
 
-        public Task DeleteMachine(int id)
+        public async Task<MachineDTO> AddMachine(MachineDTO machine)
         {
-            throw new NotImplementedException();
+            var returnedMachine = await this._machineRepository.AddMachine(this._mapper.Map<Machine>(machine));
+            return this._mapper.Map<MachineDTO>(returnedMachine);
         }
 
-        public Task<MachineDTO> GetMachineById(int id)
+        public async Task DeleteMachine(int id)
         {
-            throw new NotImplementedException();
+            await this._machineRepository.DeleteMachine(id);
         }
 
-        public Task<List<Machine>> GetMachines()
+        public async Task<MachineDTO> GetMachineById(int id)
         {
-            throw new NotImplementedException();
+            return this._mapper.Map<MachineDTO>(await this._machineRepository.GetMachineById(id));
         }
 
-        public Task<bool> IsMachineExistsById(int id)
+        public async Task<List<Machine>> GetMachines()
         {
-            throw new NotImplementedException();
+            return await this._machineRepository.GetMachines();
         }
 
-        public Task UpdateCollaborateur(int id, MachineDTO machine)
+        public async Task<bool> IsMachineExistsById(int id)
         {
-            throw new NotImplementedException();
+            return await this._machineRepository.IsMachineExistsById(id);
+        }
+
+        public async Task UpdateMachine(int id, MachineDTO machine)
+        {
+           await this._machineRepository.UpdateMachine(id, this._mapper.Map<Machine>(machine));
         }
     }
 }

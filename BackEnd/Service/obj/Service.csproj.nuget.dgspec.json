@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Service\\Service.csproj": {}
+    "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Service\\Service.csproj": {}
   },
   "projects": {
-    "c:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Repository\\Repository.csproj": {
+    "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Repository\\Repository.csproj",
+        "projectUniqueName": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "c:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Repository\\Repository.csproj",
+        "projectPath": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Repository\\Repository.csproj",
         "packagesPath": "C:\\Users\\hosaffih\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Repository\\obj\\",
+        "outputPath": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hosaffih\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -77,14 +77,14 @@
         }
       }
     },
-    "c:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Service\\Service.csproj": {
+    "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Service\\Service.csproj",
+        "projectUniqueName": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Service\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "c:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Service\\Service.csproj",
+        "projectPath": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Service\\Service.csproj",
         "packagesPath": "C:\\Users\\hosaffih\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Service\\obj\\",
+        "outputPath": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hosaffih\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -94,14 +94,15 @@
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "c:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Repository\\Repository.csproj": {
-                "projectPath": "c:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Repository\\Repository.csproj"
+              "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Repository\\Repository.csproj"
               }
             }
           }

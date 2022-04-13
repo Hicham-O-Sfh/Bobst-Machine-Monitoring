@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "iopfUq+Z+EX8WpIQCATzbIVaS76GEwm/ibfO3+rRTD8=",
+  "Hash": "NAghDpamQReCecU9l17XxeZ/Ia1GxvLSe8+MYRSOvTY=",
   "Source": "Service",
   "BasePath": "_content/Service",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Repository\\Repository.csproj",
+      "Version": 2,
+      "Source": "Repository",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
+    }
+  ],
   "DiscoveryPatterns": [],
   "Assets": []
 }

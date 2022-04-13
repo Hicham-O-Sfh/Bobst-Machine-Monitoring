@@ -2,7 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using Repository;
 using Repository.Data.Models;
 using Repository.Interfaces;
-using WebAPI.Helpers;
+using Service.Interfaces;
+using Service.Services;
 
 var myAllowSpecificOrigins = "_myAllowSpecificOrigins";
 var builder = WebApplication.CreateBuilder(args);
@@ -20,7 +21,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 //Add IoC Mapping 
-// builder.Services.AddScoped<IMachineRepository, MachineRepository>();
+builder.Services.AddScoped<IMachineService, MachineService>();
 
 //DBContext Config 
 builder.Services.AddDbContext<MachineMonitoringContext>(options =>

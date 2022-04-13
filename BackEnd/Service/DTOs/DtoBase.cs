@@ -1,4 +1,4 @@
-﻿namespace Repository.Data.DTOs
+﻿namespace Service.DTOs
 {
     public class DtoBase
     {
