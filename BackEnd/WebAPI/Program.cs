@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using Repository;
 using Repository.Data.Models;
 using Repository.Interfaces;
+using Repository.Repositories;
 using Service.Interfaces;
 using Service.Services;
 
@@ -21,13 +21,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 //Add IoC Mapping 
+builder.Services.AddScoped<IMachineRepository, MachineRepository>();
+builder.Services.AddScoped<IMachineProductionRepository, MachineProductionRepository>();
 builder.Services.AddScoped<IMachineService, MachineService>();
-
-//DBContext Config 
-builder.Services.AddDbContext<MachineMonitoringContext>(options =>
-{
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-});
 
 //enable CORS
 builder.Services.AddCors(options =>
