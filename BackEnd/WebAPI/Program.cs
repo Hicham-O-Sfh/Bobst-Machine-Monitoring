@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Repository.Data.Models;
 using Repository.Interfaces;
 using Repository.Repositories;
+using Service.Helpers;
 using Service.Interfaces;
 using Service.Services;
 
@@ -14,6 +15,7 @@ builder.Logging.AddConsole();
 
 // Add services to the container.
 builder.Services.AddControllers();
+builder.Services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
 // builder.Services.AddControllers().AddNewtonsoftJson(options =>
 //     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
 // );
@@ -22,12 +24,16 @@ builder.Services.AddSwaggerGen();
 
 //Add IoC Mapping 
 
-
-builder.Services.AddScoped<IMachineService, MachineService>();
-builder.Services.AddScoped<IMachineProductionService, MachineProductionService>();
+builder.Services.AddDbContext<MachineMonitoringContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
 
 builder.Services.AddScoped<IMachineRepository, MachineRepository>();
 builder.Services.AddScoped<IMachineProductionRepository, MachineProductionRepository>();
+
+builder.Services.AddScoped<IMachineService, MachineService>();
+builder.Services.AddScoped<IMachineProductionService, MachineProductionService>();
 
 //enable CORS
 builder.Services.AddCors(options =>
