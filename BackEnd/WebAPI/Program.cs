@@ -21,9 +21,13 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 //Add IoC Mapping 
+
+
+builder.Services.AddScoped<IMachineService, MachineService>();
+builder.Services.AddScoped<IMachineProductionService, MachineProductionService>();
+
 builder.Services.AddScoped<IMachineRepository, MachineRepository>();
 builder.Services.AddScoped<IMachineProductionRepository, MachineProductionRepository>();
-builder.Services.AddScoped<IMachineService, MachineService>();
 
 //enable CORS
 builder.Services.AddCors(options =>

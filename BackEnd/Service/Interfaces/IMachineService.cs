@@ -1,4 +1,3 @@
-using Repository.Data.Models;
 using Service.DTOs;
 
 namespace Service.Interfaces

@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using Repository.Data.Models;
+using Service.DTOs;
 
 namespace Service.Helpers
 {
@@ -6,7 +8,8 @@ namespace Service.Helpers
     {
         public AutoMapperProfiles()
         {
-            // CreateMap<ToDoListDTO, ToDoList>().ForMember(s => s.ToDoItemList, c => c.MapFrom(m => m.ToDoItemList)).ReverseMap();
+            CreateMap<MachineDTO, Machine>().ReverseMap();
+            CreateMap<MachineProductionDTO, MachineProduction>().ReverseMap();
         }
     }
 }
