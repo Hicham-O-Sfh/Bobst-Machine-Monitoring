@@ -9,7 +9,11 @@ import { Machine } from './Models/Machine';
   providedIn: 'root'
 })
 export class MachineService {
-  readonly machinesUrl: string = `${environment.URL}/machines`;
+
+  readonly getAllMachinesUrl: string = `${environment.URL}/machines`;
+  readonly findMachineUrl: string = `${environment.URL}/machine/`;
+  readonly getProductionOfMachine: string = `${environment.URL}/machine/totalproduction`;
+
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
@@ -17,9 +21,18 @@ export class MachineService {
   constructor(private http: HttpClient) { }
 
   getMachines(): Observable<Machine[]> {
-    return this.http.get<Machine[]>(this.machinesUrl)
-      .pipe(
-        tap(_ => console.log("success !"))
-      );
+    return this.http.get<Machine[]>(this.getAllMachinesUrl);
+  }
+
+  findMachine(id: number): Observable<Machine> {
+    return this.http.get<Machine>(this.findMachineUrl + id);
+  }
+
+  getTotalProduction(machineId: number): Observable<any> {
+    return this.http.get<number>(this.getProductionOfMachine, {
+      params: {
+        id: machineId
+      },
+    });
   }
 }

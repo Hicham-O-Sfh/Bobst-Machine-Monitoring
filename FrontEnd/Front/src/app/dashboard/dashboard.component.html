@@ -1,1 +1,30 @@
-<p>dashboard works!</p>
+<div class="row mt-5">
+
+    <div class="col-md-4 text-end">
+        <strong>
+            Machine :
+        </strong>
+    </div>
+    <div class="col-md-8">
+        {{ machine?.name }}
+    </div>
+
+    <div class="col-md-4 text-end">
+        <strong>
+            Description :
+        </strong>
+    </div>
+    <div class="col-md-8">
+        {{ machine?.description }}
+    </div>
+
+    <div class="col-md-4 text-end">
+        <strong>
+            Total production :
+        </strong>
+    </div>
+    <div class="col-md-8">
+        {{ machine?.production }}
+    </div>
+
+</div>

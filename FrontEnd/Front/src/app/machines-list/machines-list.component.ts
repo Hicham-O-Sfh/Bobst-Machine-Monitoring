@@ -20,10 +20,6 @@ export class MachinesListComponent implements OnInit {
 
   ngOnInit() {
     this.getMachines();
-    // interval(5 * 1000)
-    //   .pipe(
-    //     mergeMap(() => this.getMachines())
-    //   ).subscribe(machines => this.machines = machines)
   }
 
   getMachines(): void {
@@ -31,7 +27,7 @@ export class MachinesListComponent implements OnInit {
   }
 
   deleteMachine(id: number): void {
-
+    // code to delete 
   }
 
   goToDashboard(id: number): void {
