@@ -9,7 +9,7 @@ namespace Service.Interfaces
         Task<int> GetProductionMachineById(int id);
         Task UpdateMachine(int id, MachineDTO machine);
         Task<MachineDTO> AddMachine(MachineDTO machine);
-        Task DeleteMachine(int id);
+        Task<int> DeleteMachine(int id);
         Task<bool> IsMachineExistsById(int id);
     }
 }

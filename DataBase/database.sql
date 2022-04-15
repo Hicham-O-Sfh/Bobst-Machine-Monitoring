@@ -23,7 +23,7 @@ CREATE TABLE [dbo].[Machine]
 CREATE TABLE [dbo].[MachineProduction]
 (
     MachineProductionId INT NOT NULL PRIMARY KEY IDENTITY,
-    machineId INT NOT NULL FOREIGN KEY REFERENCES [dbo].[Machine](machineId),
+    machineId INT NOT NULL FOREIGN KEY REFERENCES [dbo].[Machine](machineId) ON DELETE CASCADE,
     totalProduction INT NOT NULL DEFAULT (0)
 );
 

@@ -12,6 +12,7 @@ namespace Repository.Repositories
         {
             this._context = context;
         }
+
         public async Task<Machine> AddMachine(Machine machine)
         {
             await this._context.Machines.AddAsync(machine);
@@ -24,12 +25,14 @@ namespace Repository.Repositories
             return await this._context.Machines.AnyAsync(machine => machine.MachineId == id);
         }
 
-        public async Task DeleteMachine(int id)
+        public async Task<int> DeleteMachine(int id)
         {
             var machineToDelete = await this._context.Machines.FindAsync(id);
-            if (machineToDelete is not null)
-                this._context.Machines.Remove(machineToDelete);
+            if (machineToDelete is null) return 0;
+            // machineToDelete.MachineProductions.
+            this._context.Machines.Remove(machineToDelete);
             await this._context.SaveChangesAsync();
+            return 1;
         }
 
         public async Task<Machine> GetMachineById(int id)

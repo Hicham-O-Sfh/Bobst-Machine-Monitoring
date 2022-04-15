@@ -36,7 +36,15 @@ namespace WebAPI.Controllers
         public async Task<ActionResult<MachineDTO>> GetMachineProduction(int id)
         {
             var data = await this._machineService.GetProductionMachineById(id);
-            return data != -1 ? Ok(data) : NotFound();
+            return data != -1 ?
+            Ok(new { totalproduction = data }) :
+            NotFound();
+        }
+
+        [HttpDelete("machine/{id}")]
+        public async Task<ActionResult<int>> DeleteMachine(int id)
+        {
+            return await this._machineService.DeleteMachine(id);
         }
     }
 }

@@ -52,8 +52,7 @@ namespace Repository.Data.Models
                 entity.HasOne(d => d.Machine)
                     .WithMany(p => p.MachineProductions)
                     .HasForeignKey(d => d.MachineId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__MachinePr__machi__3B40CD36");
+                    .HasConstraintName("FK__MachinePr__machi__46B27FE2");
             });
 
             OnModelCreatingPartial(modelBuilder);

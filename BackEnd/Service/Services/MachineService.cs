@@ -23,9 +23,9 @@ namespace Service.Services
             return this._mapper.Map<MachineDTO>(returnedMachine);
         }
 
-        public async Task DeleteMachine(int id)
+        public async Task<int> DeleteMachine(int id)
         {
-            await this._machineRepository.DeleteMachine(id);
+            return await this._machineRepository.DeleteMachine(id);
         }
 
         public async Task<MachineDTO> GetMachineById(int id)
