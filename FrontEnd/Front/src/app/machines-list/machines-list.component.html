@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-md-12 mt-5">
+        <div class="table-responsive">
+            <table class="table table-sm table-hover w-100">
+                <thead>
+                    <tr class="text-center">
+                        <th>#id</th>
+                        <th>Name</th>
+                        <th>Production</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="text-center" *ngFor="let machine of machines" (click)="goToDashboard(machine.machineId)">
+                        <td>{{ machine.machineId }}</td>
+                        <td>{{ machine.name }}</td>
+                        <td>{{ machine.production }}</td>
+                        <td (click)="deleteMachine(machine.machineId)">
+                            <button class="btn btn-sm btn-outline-danger">
+                                <i class="bi bi-trash"></i>
+                                delete
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
