@@ -33,14 +33,9 @@ namespace Service.Services
             return this._mapper.Map<MachineProductionDTO>(await this._machineProductionRepository.GetMachineProductionById(id));
         }
 
-        public async Task<List<MachineProductionDTO>> GetMachines()
+        public async Task<List<MachineProductionDTO>> GetMachinesProductions()
         {
             return this._mapper.Map<List<MachineProductionDTO>>(await this._machineProductionRepository.GetMachinesProductions());
-        }
-
-        public Task<List<MachineProductionDTO>> GetMachinesProductions()
-        {
-            throw new NotImplementedException();
         }
 
         public async Task<bool> IsMachineProductionExistsById(int id)

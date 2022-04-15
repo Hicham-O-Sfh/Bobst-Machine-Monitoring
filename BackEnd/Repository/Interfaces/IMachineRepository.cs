@@ -10,5 +10,6 @@ namespace Repository.Interfaces
         Task<Machine> AddMachine(Machine machine);
         Task DeleteMachine(int id);
         Task<bool> IsMachineExistsById(int id);
+        Task<int> GetProductionMachineById(int id);
     }
 }

@@ -38,6 +38,11 @@ namespace Service.Services
             return this._mapper.Map<List<MachineDTO>>(await this._machineRepository.GetMachines());
         }
 
+        public async Task<int> GetProductionMachineById(int id)
+        {
+            return await this._machineRepository.GetProductionMachineById(id);
+        }
+
         public async Task<bool> IsMachineExistsById(int id)
         {
             return await this._machineRepository.IsMachineExistsById(id);

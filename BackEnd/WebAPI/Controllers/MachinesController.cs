@@ -5,7 +5,7 @@ using Service.Interfaces;
 
 namespace WebAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/")]
     [ApiController]
     public class MachinesController : ControllerBase
     {
@@ -18,11 +18,25 @@ namespace WebAPI.Controllers
             this._mapper = mapper;
         }
 
-        [HttpGet]
+        [HttpGet("machines")]
         public async Task<ActionResult<IEnumerable<MachineDTO>>> GetMachines()
         {
-            var machines = await this._machineService.GetMachines();
-            return Ok(machines);
+            var machinesDetails = await this._machineService.GetMachines();
+            return Ok(machinesDetails);
+        }
+
+        [HttpGet("machine/{id}")]
+        public async Task<ActionResult<MachineDTO>> GetMachine(int id)
+        {
+            var machine = await this._machineService.GetMachineById(id);
+            return machine is not null ? Ok(machine) : NotFound();
+        }
+
+        [HttpGet("machine/totalproduction")]
+        public async Task<ActionResult<MachineDTO>> GetMachineProduction(int id)
+        {
+            var data = await this._machineService.GetProductionMachineById(id);
+            return data != -1 ? Ok(data) : NotFound();
         }
     }
 }

@@ -15,5 +15,10 @@ namespace Repository.Data.Models
         public string? Description { get; set; }
 
         public virtual ICollection<MachineProduction> MachineProductions { get; set; }
+
+        public int GetProduction()
+        {
+            return MachineProductions.Sum(mp => mp.TotalProduction);
+        }
     }
 }

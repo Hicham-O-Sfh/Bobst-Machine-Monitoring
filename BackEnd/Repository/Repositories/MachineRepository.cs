@@ -37,9 +37,15 @@ namespace Repository.Repositories
             return await this._context.Machines.FindAsync(id);
         }
 
+        public async Task<int> GetProductionMachineById(int id)
+        {
+            var machine = await this._context.Machines.Include(machine => machine.MachineProductions).Where(machine => machine.MachineId == id).FirstOrDefaultAsync();
+            return machine is not null ? machine.MachineProductions.Sum(machineProd => machineProd.TotalProduction) : -1;
+        }
+
         public async Task<List<Machine>> GetMachines()
         {
-            return await this._context.Machines.ToListAsync();
+            return await this._context.Machines.Include(machine => machine.MachineProductions).ToListAsync();
         }
 
         public async Task UpdateMachine(int id, Machine machine)

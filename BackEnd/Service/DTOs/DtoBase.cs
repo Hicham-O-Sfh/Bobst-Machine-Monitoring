@@ -2,8 +2,8 @@
 {
     public class DtoBase
     {
-        public int Id { get; set; }
-        public DateTime CreationDate { get; set; }
-        public DateTime ModificationDate { get; set; }
+        // just default values for testing ...
+        public DateTime CreationDate { get; set; } = DateTime.Now;
+        public DateTime ModificationDate { get; set; } = DateTime.Now;
     }
 }
