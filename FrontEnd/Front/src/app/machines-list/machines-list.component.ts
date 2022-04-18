@@ -26,8 +26,14 @@ export class MachinesListComponent implements OnInit {
     this.machineService.getMachines().subscribe(machines => this.machines = machines);
   }
 
-  deleteMachine(id: number): void {
-    // code to delete 
+  deleteMachine(event: MouseEvent, id: number): void {
+    event.stopPropagation();
+    this.machineService.deleteMachine(id).subscribe(isDeleted => {
+      if (isDeleted)
+        this.machines = this.machines.filter(m => m.machineId !== id);
+    },
+      (error) => console.log(error)
+    );
   }
 
   goToDashboard(id: number): void {

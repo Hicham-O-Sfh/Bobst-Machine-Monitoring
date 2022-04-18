@@ -1,7 +1,7 @@
 import { HttpHeaders } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { interval } from 'rxjs';
+import { forkJoin, interval, Subscription } from 'rxjs';
 import { mergeMap } from 'rxjs/operators';
 import { MachineService } from '../machine.service';
 import { Machine } from '../Models/Machine';
@@ -11,10 +11,11 @@ import { Machine } from '../Models/Machine';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit, OnDestroy {
   readonly machineId: number;
   machine?: Machine;
-  interval: number = 0;
+  interval: number = 5000;
+  subscription?: Subscription;
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -28,24 +29,37 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.machineService.findMachine(this.machineId).subscribe(
-      machine => this.machine = machine,
-      err => console.log(err),
-    );
+    this.getAllData();
     this.updateProductionValue(this.machineId);
-    this.interval = 5000; // 5000 millisecondes
+  }
+
+  getAllData(): void {
+    forkJoin(
+      this.machineService.findMachine(this.machineId),
+      this.getTotalProduction(this.machineId)
+    ).subscribe(
+      (results) => {
+        this.machine = results[0];
+        this.machine.production = results[1].totalproduction;
+      },
+      (error) => console.log(error)
+    );
   }
 
   updateProductionValue(machineId: number): void {
-    interval(this.interval)
+    this.subscription = interval(this.interval)
       .pipe(mergeMap(() => this.getTotalProduction(machineId)))
       .subscribe(data => {
         if (this.machine)
           this.machine.production = data.totalproduction
-      })
+      });
   }
 
   getTotalProduction(machineId: number) {
     return this.machineService.getTotalProduction(machineId);
+  }
+
+  ngOnDestroy(): void {
+    this.subscription?.unsubscribe();
   }
 }

@@ -15,8 +15,9 @@
                         <td>{{ machine.machineId }}</td>
                         <td>{{ machine.name }}</td>
                         <td>{{ machine.production }}</td>
-                        <td (click)="deleteMachine(machine.machineId)">
-                            <button class="btn btn-sm btn-outline-danger">
+                        <td>
+                            <button class="btn btn-sm btn-outline-danger"
+                                (click)="deleteMachine($event, machine.machineId)">
                                 <i class="bi bi-trash"></i>
                                 delete
                             </button>

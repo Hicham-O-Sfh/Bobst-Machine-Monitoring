@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { tap } from 'rxjs/operators';
 import { Machine } from './Models/Machine';
 
 @Injectable({
@@ -10,9 +9,10 @@ import { Machine } from './Models/Machine';
 })
 export class MachineService {
 
-  readonly getAllMachinesUrl: string = `${environment.URL}/machines`;
-  readonly findMachineUrl: string = `${environment.URL}/machine/`;
-  readonly getProductionOfMachine: string = `${environment.URL}/machine/totalproduction`;
+  readonly getAllMachines_Url: string = `${environment.URL}/machines`;
+  readonly findMachine_Url: string = `${environment.URL}/machine/`;
+  readonly deleteMachine_URL: string = `${environment.URL}/machine/`;
+  readonly getProductionOfMachine_URL: string = `${environment.URL}/machine/totalproduction`;
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -21,18 +21,22 @@ export class MachineService {
   constructor(private http: HttpClient) { }
 
   getMachines(): Observable<Machine[]> {
-    return this.http.get<Machine[]>(this.getAllMachinesUrl);
+    return this.http.get<Machine[]>(this.getAllMachines_Url);
   }
 
   findMachine(id: number): Observable<Machine> {
-    return this.http.get<Machine>(this.findMachineUrl + id);
+    return this.http.get<Machine>(this.findMachine_Url + id);
   }
 
   getTotalProduction(machineId: number): Observable<any> {
-    return this.http.get<number>(this.getProductionOfMachine, {
+    return this.http.get<number>(this.getProductionOfMachine_URL, {
       params: {
         id: machineId
       },
     });
   }
+
+  deleteMachine(machineId: number): Observable<any> {
+    return this.http.delete(this.deleteMachine_URL + machineId);
+  };
 }

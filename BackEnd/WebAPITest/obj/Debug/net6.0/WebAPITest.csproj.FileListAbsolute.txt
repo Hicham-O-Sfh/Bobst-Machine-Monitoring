@@ -97,3 +97,6 @@ C:\Users\hosaffih\Mes Projets\Bobst-Machine-Monitoring\BackEnd\WebAPITest\obj\De
 C:\Users\hosaffih\Mes Projets\Bobst-Machine-Monitoring\BackEnd\WebAPITest\obj\Debug\net6.0\WebAPITest.pdb
 C:\Users\hosaffih\Mes Projets\Bobst-Machine-Monitoring\BackEnd\WebAPITest\obj\Debug\net6.0\WebAPITest.genruntimeconfig.cache
 C:\Users\hosaffih\Mes Projets\Bobst-Machine-Monitoring\BackEnd\WebAPITest\obj\Debug\net6.0\ref\WebAPITest.dll
+C:\Users\hosaffih\Mes Projets\Bobst-Machine-Monitoring\BackEnd\WebAPITest\bin\Debug\net6.0\System.Net.Http.Formatting.dll
+C:\Users\hosaffih\Mes Projets\Bobst-Machine-Monitoring\BackEnd\WebAPITest\bin\Debug\net6.0\System.Web.Http.dll
+C:\Users\hosaffih\Mes Projets\Bobst-Machine-Monitoring\BackEnd\WebAPITest\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
