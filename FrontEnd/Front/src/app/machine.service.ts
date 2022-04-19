@@ -9,6 +9,7 @@ import { Machine } from './Models/Machine';
 })
 export class MachineService {
 
+  // my APIs urls
   readonly getAllMachines_Url: string = `${environment.URL}/machines`;
   readonly findMachine_Url: string = `${environment.URL}/machine/`;
   readonly deleteMachine_URL: string = `${environment.URL}/machine/`;
@@ -20,14 +21,17 @@ export class MachineService {
 
   constructor(private http: HttpClient) { }
 
+  // Get : all machines
   getMachines(): Observable<Machine[]> {
     return this.http.get<Machine[]>(this.getAllMachines_Url);
   }
 
+  // Get : find specific machine by id
   findMachine(id: number): Observable<Machine> {
     return this.http.get<Machine>(this.findMachine_Url + id);
   }
 
+  // Get : total productions of specific machine
   getTotalProduction(machineId: number): Observable<any> {
     return this.http.get<number>(this.getProductionOfMachine_URL, {
       params: {
@@ -36,6 +40,7 @@ export class MachineService {
     });
   }
 
+  // Delete : delete specific machine and all it's details 
   deleteMachine(machineId: number): Observable<any> {
     return this.http.delete(this.deleteMachine_URL + machineId);
   };
