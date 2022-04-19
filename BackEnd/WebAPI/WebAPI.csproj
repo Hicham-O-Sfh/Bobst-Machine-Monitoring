@@ -16,7 +16,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Service\Service.csproj" />
     <ProjectReference Include="..\Repository\Repository.csproj" />
-    <ProjectReference Include="..\WebAPITest\WebAPITest.csproj" />
   </ItemGroup>
 
 </Project>

@@ -4,14 +4,14 @@
     "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\WebAPITest\\WebAPITest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\WebAPITest\\WebAPITest.csproj": {
+    "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\WebAPITest\\WebAPITest.csproj",
-        "projectName": "WebAPITest",
-        "projectPath": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\WebAPITest\\WebAPITest.csproj",
+        "projectUniqueName": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Repository\\Repository.csproj",
+        "projectName": "Repository",
+        "projectPath": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Repository\\Repository.csproj",
         "packagesPath": "C:\\Users\\hosaffih\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\WebAPITest\\obj\\",
+        "outputPath": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hosaffih\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,25 +40,19 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.AspNet.WebApi.Core": {
+            "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.2.8, )"
+              "version": "[6.0.4, )"
             },
-            "Microsoft.NET.Test.Sdk": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[16.11.0, )"
+              "version": "[6.0.4, )"
             },
-            "NUnit": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[3.13.2, )"
-            },
-            "NUnit3TestAdapter": {
-              "target": "Package",
-              "version": "[4.0.0, )"
-            },
-            "coverlet.collector": {
-              "target": "Package",
-              "version": "[3.1.0, )"
+              "version": "[6.0.4, )"
             }
           },
           "imports": [
@@ -72,6 +66,246 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Service\\Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Service\\Service.csproj",
+        "projectName": "Service",
+        "projectPath": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Service\\Service.csproj",
+        "packagesPath": "C:\\Users\\hosaffih\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\hosaffih\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Repository\\Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\WebAPITest\\WebAPITest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\WebAPITest\\WebAPITest.csproj",
+        "projectName": "WebAPITest",
+        "projectPath": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\WebAPITest\\WebAPITest.csproj",
+        "packagesPath": "C:\\Users\\hosaffih\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\WebAPITest\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\hosaffih\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Repository\\Repository.csproj"
+              },
+              "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Service\\Service.csproj": {
+                "projectPath": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Service\\Service.csproj"
+              },
+              "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\WebAPI\\WebAPI.csproj": {
+                "projectPath": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\WebAPI\\WebAPI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FakeItEasy": {
+              "target": "Package",
+              "version": "[7.3.1, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.11.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.17.2, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\WebAPI\\WebAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\WebAPI\\WebAPI.csproj",
+        "projectName": "WebAPI",
+        "projectPath": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\WebAPI\\WebAPI.csproj",
+        "packagesPath": "C:\\Users\\hosaffih\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\WebAPI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\hosaffih\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Repository\\Repository.csproj"
+              },
+              "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Service\\Service.csproj": {
+                "projectPath": "C:\\Users\\hosaffih\\Mes Projets\\Bobst-Machine-Monitoring\\BackEnd\\Service\\Service.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
